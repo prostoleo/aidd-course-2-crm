@@ -76,9 +76,18 @@ const handleLogout = async () => {
   flex-direction: column;
 }
 
+html.dark .sidebar {
+  background-color: var(--bg-secondary);
+  border-right-color: var(--border);
+}
+
 .sidebar-header {
   padding: 1.5rem;
   border-bottom: 1px solid #e0e0e0;
+}
+
+html.dark .sidebar-header {
+  border-bottom-color: var(--border);
 }
 
 .sidebar-header h3 {
@@ -108,8 +117,16 @@ const handleLogout = async () => {
   font-size: 0.95rem;
 }
 
+html.dark .sidebar-link {
+  color: var(--text);
+}
+
 .sidebar-link:hover {
   background-color: #e9ecef;
+}
+
+html.dark .sidebar-link:hover {
+  background-color: var(--bg);
 }
 
 .sidebar-link.active {
@@ -119,15 +136,29 @@ const handleLogout = async () => {
   font-weight: 500;
 }
 
+html.dark .sidebar-link.active {
+  background-color: var(--bg);
+  border-right-color: var(--primary);
+  color: var(--primary);
+}
+
 .sidebar-footer {
   padding: 1rem 0;
   border-top: 1px solid #e0e0e0;
+}
+
+html.dark .sidebar-footer {
+  border-top-color: var(--border);
 }
 
 .main-content {
   flex: 1;
   overflow-y: auto;
   background-color: #fff;
+}
+
+html.dark .main-content {
+  background-color: var(--bg);
 }
 
 .main-content .container {
